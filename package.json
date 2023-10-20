@@ -1,0 +1,43 @@
+{
+  "name": "@lexxsoft/usei18n",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version release",
+    "test": "npm run build && mocha",
+    "upd": "npm i @lexxsoft/odata-query@latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexxyar/useI18n.git"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "axios",
+    "i18n",
+    "translation",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Aleksey Komov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexxyar/useI18n/issues"
+  },
+  "homepage": "https://github.com/lexxyar/useI18n#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vue": "^3.2.36",
+    "axios": "^1.1.2"
+  },
+  "dependencies": {
+    "@lexxsoft/odata-query": "^1.21.1"
+  }
+}
