@@ -96,7 +96,7 @@ export const i18n = {
             i18n.global.messages.value[locale] = {...messages}
         },
         trans: (key: string, options: any = {}): string => {
-            function substituteOptions(translation: string, options:any) {
+            function substituteOptions(translation: string, options: any) {
                 let res: string = translation
                 if (!!options && Object.keys(options).length > 0) {
                     Object.keys(options).map((attr: string) => {
@@ -106,7 +106,7 @@ export const i18n = {
                 return res
             }
 
-            let messages:any = {}
+            let messages: any = {}
             if (!!i18n.global.messages.value[i18n.global.locale.value]) {
                 messages = i18n.global.messages.value[i18n.global.locale.value]
             } else {
@@ -211,10 +211,10 @@ export const i18n = {
 }
 
 export const useI18n = function () {
-    const t = (key: string, options: object) => {
+    const t = (key: string, options: object = {}) => {
         return i18n.global.trans(key, options)
     }
-    const tc = (key: string, count: number, options: object) => {
+    const tc = (key: string, count: number, options: object = {}) => {
         return i18n.global.trans_choice(key, count, options)
     }
 
